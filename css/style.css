@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500,600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, #e2e2e2 50%, #47bcaa 50%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    min-height: 100vh;
+    margin: 0;
+    color: rgba(0,0,0,.7);
+    font-size: 1.2rem;
+}
+
+main {
+    max-width: 800px;
+    width: 100%;
+    margin: 100px auto;
+    height: 100vh;
+}
+
+input {
+    display: none;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+} 
+
+.tab {
+    cursor: pointer;  
+}
+
+.tab--main {
+    padding: 13px 5px;
+    border-radius: 6px 6px 0 0;
+    background-color: #47bcaa;
+    width: 30%;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+i {
+    font-size: 2.8rem;
+}
+
+.tab-title {
+    text-transform: capitalize;
+    margin: 10px 0 0 0;
+}
+
+ input[id="tab-1"]:checked ~ .tabs .tab--1,
+ input[id="tab-2"]:checked ~ .tabs .tab--2,
+ input[id="tab-3"]:checked ~ .tabs .tab--3 {
+    background-color: #fff;
+    color: #47bcaa;
+    transition: all .3s ease-in;
+}
+
+.tabs-body {
+    box-shadow: 0 5px 10px rgba(0,0,0,.7);
+}
+
+.tab-article  {
+    background-color: #fff;
+    display: none;
+    min-height: 200px;
+    padding: 30px 15px;
+}
+
+input[id="tab-1"]:checked ~ .tabs-body .tab-article--1,
+input[id="tab-2"]:checked ~ .tabs-body .tab-article--2,
+input[id="tab-3"]:checked ~ .tabs-body .tab-article--3 {
+    display: block;
+}
+
+.title {
+    margin: 0 auto;
+    text-align: center;
+    width: 55%;
+    line-height: 1.5;
+    color: #47bcaa;
+    font-size: 1.7em;
+}
+
+.tab-article__text {
+    line-height: 1.5;
+    font-size: 1.5rem;
+}
+
+.row {
+    display: flex;
+    margin: 30px 0;
+}
+
+.block-img {
+    padding: 0 15px;
+    flex-basis: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.img {
+    max-width: 100%;
+    min-height: 282px;
+    display: none;
+}
+
+
+input[id="tab-4"]:checked ~ .images .img--image1,
+input[id="tab-5"]:checked ~ .images .img--image2 {
+    display: block;
+}
+
+.features {
+    flex-basis: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.feature {
+    flex-basis: 46%;
+}
+
+.feature__icon {
+    color: #47bcaa;
+    margin-bottom: 10px;
+}
+
+.feature__title {
+    font-size: 1.4rem;
+    color: #47bcaa;
+    margin-bottom: 5px;
+}
+
+.tabs-cups {
+    margin: 0 auto;
+    width: 20%;
+}
+
+.tab-cup {
+    width: 17px;
+    height: 17px;
+    border-radius: 3px;
+    border: 1.5px solid #47bcaa;
+    background-color: #fff;
+}
+
+input[id="tab-4"]:checked ~ .tabs-cups .tab-cup-1,
+input[id="tab-5"]:checked ~ .tabs-cups .tab-cup-2 {
+   background-color: #47bcaa;
+}
+
+
+
+
