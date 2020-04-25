@@ -16,13 +16,15 @@ body {
     margin: 0;
     color: rgba(0,0,0,.7);
     font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 main {
-    max-width: 800px;
-    width: 100%;
+    max-width: 830px;
     margin: 0 auto;
-    padding: 80px 0;
+    padding: 0 15px;
 }
 
 input {
@@ -33,13 +35,9 @@ input {
     display: flex;
     justify-content: space-between;
     text-align: center;
-} 
-
-.tab {
-    cursor: pointer;  
 }
 
-.tab--main {
+.tab {
     padding: 13px 5px;
     border-radius: 6px 6px 0 0;
     background-color: #47bcaa;
@@ -50,13 +48,15 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;  
+    transition: all .3s ease-in;
 }
 
 i {
     font-size: 2.8rem;
 }
 
-.tab-title {
+.tab__title {
     text-transform: capitalize;
     margin: 10px 0 0 0;
 }
@@ -66,27 +66,26 @@ i {
  input[id="tab-3"]:checked ~ .tabs .tab--3 {
     background-color: #fff;
     color: #47bcaa;
-    transition: all .3s ease-in;
 }
 
 .tabs-body {
     box-shadow: 0 5px 10px rgba(0,0,0,.7);
 }
 
-.tab-article  {
+.article  {
     background-color: #fff;
     display: none;
-    min-height: 200px;
+    min-height: 515px;
     padding: 30px 15px;
 }
 
-input[id="tab-1"]:checked ~ .tabs-body .tab-article--1,
-input[id="tab-2"]:checked ~ .tabs-body .tab-article--2,
-input[id="tab-3"]:checked ~ .tabs-body .tab-article--3 {
+input[id="tab-1"]:checked ~ .tabs-body .article--1,
+input[id="tab-2"]:checked ~ .tabs-body .article--2,
+input[id="tab-3"]:checked ~ .tabs-body .article--3 {
     display: block;
 }
 
-.title {
+.article__title {
     margin: 0 auto;
     text-align: center;
     width: 55%;
@@ -95,7 +94,7 @@ input[id="tab-3"]:checked ~ .tabs-body .tab-article--3 {
     font-size: 1.7em;
 }
 
-.tab-article__text {
+.article__text {
     line-height: 1.5;
     font-size: 1.5rem;
 }
@@ -135,6 +134,7 @@ input[id="tab-5"]:checked ~ .images .img--image2 {
 
 .feature {
     flex-basis: 46%;
+    margin-bottom: 30px;
 }
 
 .feature__icon {
@@ -143,26 +143,28 @@ input[id="tab-5"]:checked ~ .images .img--image2 {
 }
 
 .feature__title {
+    margin: 0;
     font-size: 1.4rem;
     color: #47bcaa;
     margin-bottom: 5px;
 }
 
-.tabs-cups {
+.tabs--cups {
     margin: 0 auto;
     width: 20%;
 }
 
-.tab-cup {
+.tab--cup {
     width: 17px;
     height: 17px;
     border-radius: 3px;
     border: 1.5px solid #47bcaa;
     background-color: #fff;
+    padding: 0;
 }
 
-input[id="tab-4"]:checked ~ .tabs-cups .tab-cup-1,
-input[id="tab-5"]:checked ~ .tabs-cups .tab-cup-2 {
+input[id="tab-4"]:checked ~ .tabs--cups .tab--cup-1,
+input[id="tab-5"]:checked ~ .tabs--cups .tab--cup-2 {
    background-color: #47bcaa;
 }
 
