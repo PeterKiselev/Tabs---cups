@@ -45,9 +45,6 @@ input {
     color: #fff;
     font-size: 1.5rem;
     font-weight: 600;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     cursor: pointer;  
     transition: all .3s ease-in;
 }
